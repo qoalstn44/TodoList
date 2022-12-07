@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import InsertItem from "./components/InsertItem";
+import ItemList from "./components/ItemList";
+import { Item } from "./types/type";
 
 function App() {
+  const initialState = JSON.parse(localStorage.getItem("todos") || "");
+  const [items, setItems] = useState<Item[]>(initialState);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(items));
+  }, [items]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="app-wrapper">
+        <div className="header">
+          <h1>{`Todo List`}</h1>
+        </div>
+        <InsertItem items={items} setItems={setItems} />
+        <ItemList items={items} setItems={setItems} />
+      </div>
     </div>
   );
 }

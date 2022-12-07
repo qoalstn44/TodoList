@@ -4,7 +4,7 @@
 }
 
 .container {
-  background: linear-gradient(to right bottom, #529252, #192831);
+  background: linear-gradient(to right bottom, #7ddadd, #192831);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .app-wrapper {
-  background-color: #446d9fba;
+  background-color: #4f75a3ba;
   min-width: 450px;
   min-height: 650px;
   padding: 30px;
@@ -47,7 +47,7 @@
   font-size: 20px;
   border-radius: 10px;
   border: 0;
-  background-color: #529252;
+  background-color: #84b884;
   cursor: pointer;
 }
 

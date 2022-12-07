@@ -31,11 +31,11 @@ const ItemList = ({ items, setItems }: Props) => {
               <button
                 className="button-delete"
                 onClick={() => clickDelete(data)}
-              >{`삭제`}</button>
+              >{`삭제하기`}</button>
               <button
                 className="button-complete"
                 onClick={() => clickComplete(data)}
-              >{`해결`}</button>
+              >{`완료`}</button>
             </div>
           </li>
         );

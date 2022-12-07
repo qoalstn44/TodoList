@@ -28,7 +28,7 @@ const InsertItem = ({ items, setItems }: Props) => {
         onChange={changeItemName}
         type="text"
       />
-      <button className="button-add" onClick={clickButton}>{`생성`}</button>
+      <button className="button-add" onClick={clickButton}>{`추가하기`}</button>
     </>
   );
 };
